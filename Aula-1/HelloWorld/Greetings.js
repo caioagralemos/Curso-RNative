@@ -17,7 +17,7 @@ if (horas >= 5 && horas < 12) {
 export default function Greetings() {
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={mensagem == 'Boa noite!' ? {color: '#FFF'} : {color: '#000'}}>{mensagem}</Text>
+      <Text style={styles.text}>{mensagem}</Text>
       <StatusBar style="auto" />
     </SafeAreaView>
   );
@@ -31,6 +31,10 @@ if (mensagem == 'Boa noite!') {
       alignItems: 'center',
       justifyContent: 'center',
     },
+    text: {
+        color: '#FFF',
+        fontFamily: 'SF Pro',
+    },
   })
 } else {
   styles = StyleSheet.create({
@@ -39,6 +43,10 @@ if (mensagem == 'Boa noite!') {
       backgroundColor: '#fff',
       alignItems: 'center',
       justifyContent: 'center',
+    },
+    text: {
+        color: '#000',
+        fontFamily: 'SF Pro',
     },
   })
 }
