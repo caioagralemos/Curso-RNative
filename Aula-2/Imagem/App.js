@@ -1,10 +1,12 @@
 import * as React from "react";
-import { Text, StyleSheet, View, Image } from "react-native";
+import { Text, StyleSheet, View, Image, SafeAreaView, ImageBackground } from "react-native";
 
 const App = () => {
   return (
-    <View style={styles.critica}>
+    <SafeAreaView style={styles.critica}>
+      <ImageBackground source={require('./assets/background.jpg')} resizeMode="cover" style={styles.image} />
       <Text style={[styles.title, styles.titleTypo]}>Ted Lasso</Text>
+
       <View style={[styles.center, styles.centerPosition]}>
         <Image
           style={[styles.posterIcon, styles.centerPosition]}
@@ -20,10 +22,12 @@ const App = () => {
           source={require("./assets/5estrelas.png")}
         />
       </View>
+
       <View style={[styles.button, styles.titlePosition]}>
         <Text style={styles.buttonText}>saiba mais</Text>
       </View>
-    </View>
+
+    </SafeAreaView>
   );
 };
 
@@ -37,6 +41,7 @@ const styles = StyleSheet.create({
   titlePosition: {
     left: "50%",
     top: "50%",
+    justifyContent: 'center'
   },
   centerPosition: {
     width: 291,
@@ -95,11 +100,16 @@ const styles = StyleSheet.create({
     height: 630,
   },
   critica: {
-    backgroundColor: "#f1f1f1",
     flex: 1,
     width: "100%",
     height: 844,
     overflow: "hidden",
+    display: 'flex',
+  },
+  image: {
+    flex: 1,
+    justifyContent: 'center',
+    opacity: 0.5,
   },
 });
 
