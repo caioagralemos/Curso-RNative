@@ -101,17 +101,17 @@ export default function App() {
       <Text style={styles.texto}>{numero}</Text>
 
       <View style={styles.btnArea}>
-        <Pressable style={styles.btn} onPress={() => changeArea(-3)}>
+        <Pressable style={styles.btn} onPress={() => { changeArea(-3); setArea('Maceió'); }}>
           <Text style={styles.btnText}>
             Maceió
           </Text>
         </Pressable>
-        <Pressable style={styles.btn} onPress={() => changeArea(2)}>
+        <Pressable style={styles.btn} onPress={() => { changeArea(2); setArea('Barcelona'); }}>
           <Text style={styles.btnText}>
             Barcelona
           </Text>
         </Pressable>
-        <Pressable style={styles.btn} onPress={() => changeArea(9)}>
+        <Pressable style={styles.btn} onPress={() => { changeArea(9); setArea('Tóquio'); }}>
           <Text style={styles.btnText}>
             Tóquio
           </Text>
