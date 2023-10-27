@@ -166,7 +166,8 @@ const styles = StyleSheet.create({
   },
   btnText: {
     fontSize: 20,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color: '#00aeef',
   },
   texto: {
     fontSize: 50,
