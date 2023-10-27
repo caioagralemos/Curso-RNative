@@ -8,6 +8,9 @@ let minutos = 0
 let horas = 0
 
 export default function Cronometro() {
+  fetch('http://worldtimeapi.org/api/timezone/America/Maceio').then(res => {
+    console.log('Resolved!', res)
+  })
   const [numero, setNumero] = useState("00:00:00")
   const [botao, setBotao] = useState('Iniciar')
   const [ultimo, setUltimo] = useState(null)
